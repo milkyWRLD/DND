@@ -31,28 +31,17 @@ function getSavedColumns() {
     progressListArray = JSON.parse(localStorage.progressItems);
     completeListArray = JSON.parse(localStorage.completeItems);
   } else {
-    let backlogListArray = [
+    backlogListArray = [
       "Завершить план по разработке нового продукта",
       "Подготовить отчет для маркетинга",
-      "Провести встречу с клиентами",
-      "Изучить новые технологии",
-      "Обновить документацию",
     ];
-
-    let progressListArray = [
+    progressListArray = [
       "Разработка новой функции сайта",
-      "Написание статьи для блога",
-      "Подготовка презентации для конференции",
-      "Ремонт компьютера",
       "Проработка нового дизайна упаковки",
     ];
-
-    let completeListArray = [
-      "Выпущен обновленный релиз приложения",
+    completeListArray = [
       "Завершен проект по redesign вебсайта",
       "Успешно прошел экзамен по программированию",
-      "Завершена реклама нового продукта",
-      "Организован корпоративный тренинг",
     ];
   }
 }
