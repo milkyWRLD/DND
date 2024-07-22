@@ -1,0 +1,224 @@
+/* Подключение шрифта */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg-color: #ffffff; /* Белый фон */
+  --primary-text-color: #000000; /* Чёрный текст */
+  --btn-bg-color: #007bff; /* Синий цвет для кнопок */
+  --btn-text-color: #ffffff; /* Белый текст на кнопках */
+  --column-bg-color: #f8f9fa; /* Светлый фон для колонок */
+  --column-border-color: #dee2e6; /* Цвет границы колонок */
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-bg-color);
+  font-family: "Roboto", sans-serif; /* Заменили шрифт на Roboto */
+  color: var(--primary-text-color);
+}
+
+h1 {
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-text-color);
+  margin-top: 20px;
+}
+
+/* Стили для списков */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Контейнер для колонок */
+.drag-container {
+  margin: 20px;
+}
+
+/* Стили для списка колонок */
+.drag-list {
+  display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding: 0;
+}
+
+/* Колонки */
+.drag-column {
+  flex: 1;
+  margin: 0 10px;
+  background-color: var(--column-bg-color);
+  border-radius: 8px;
+  border: 1px solid var(--column-border-color);
+  overflow-x: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.drag-column .header {
+  color: var(--primary-text-color);
+  padding: 1px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/* Стили для элементов в колонках */
+.drag-item-list {
+  padding: 10px;
+  min-height: 50px;
+}
+
+.drag-item {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: var(--primary-bg-color);
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.drag-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.drag-item .delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Стили для кнопок */
+.add-btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.add-btn {
+  margin: 5px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 4px;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+.add-btn:active {
+  transform: scale(0.98);
+}
+
+.solid {
+  display: none;
+}
+
+.solid:hover {
+  background-color: #0056b3;
+  color: var(--btn-text-color);
+}
+
+/* Стили для поля ввода */
+.add-container {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  display: none;
+}
+
+.add-item {
+  width: 100%;
+  min-height: 100px;
+  background-color: var(--primary-bg-color);
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  color: var(--primary-text-color);
+}
+
+.add-item-file {
+  margin-top: 10px;
+}
+
+/* Кастомный скроллбар */
+.custom-scroll {
+  overflow-y: auto;
+  max-height: 75vh;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Медиа-запросы */
+@media screen and (max-width: 1800px) {
+  .main-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .drag-container {
+    margin: 0;
+  }
+
+  .drag-list {
+    display: block;
+  }
+
+  .drag-column {
+    margin: 10px 0;
+  }
+}
