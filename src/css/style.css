@@ -1,5 +1,5 @@
 /* Подключение шрифта */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 html {
   box-sizing: border-box;
@@ -17,8 +17,9 @@ html {
 body {
   margin: 0;
   background-color: var(--primary-bg-color);
-  font-family: "Roboto", sans-serif; /* Заменили шрифт на Roboto */
+  font-family: "Roboto", sans-serif;
   color: var(--primary-text-color);
+  font-weight: 400; /* Обычный вес шрифта */
 }
 
 h1 {
@@ -31,6 +32,7 @@ h1 {
   font-size: 2.5rem;
   color: var(--primary-text-color);
   margin-top: 20px;
+  font-weight: 700; /* Жирный шрифт */
 }
 
 /* Стили для списков */
@@ -75,6 +77,7 @@ ul {
 .header h1 {
   font-size: 1.25rem;
   margin: 0;
+  font-weight: 700; /* Жирный шрифт */
 }
 
 /* Стили для элементов в колонках */
@@ -91,6 +94,7 @@ ul {
   border-radius: 4px;
   cursor: pointer;
   position: relative;
+  font-weight: 400; /* Обычный вес шрифта */
 }
 
 .drag-item img {
@@ -98,22 +102,7 @@ ul {
   height: auto;
 }
 
-.drag-item .delete-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background: red;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-}
+/* Удален стиль для кнопки удаления */
 
 /* Стили для кнопок */
 .add-btn-group {
@@ -133,6 +122,7 @@ ul {
   background-color: var(--btn-bg-color);
   color: var(--btn-text-color);
   transition: background-color 0.3s ease;
+  font-weight: 700; /* Жирный шрифт */
 }
 
 .add-btn:hover {
@@ -169,6 +159,7 @@ ul {
   border: 1px solid #ced4da;
   padding: 10px;
   color: var(--primary-text-color);
+  font-weight: 400; /* Обычный вес шрифта */
 }
 
 .add-item-file {
